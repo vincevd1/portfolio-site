@@ -1,4 +1,6 @@
-# Porfolio Site
+![alt text](https://raw.githubusercontent.com/vincevd1/portfolio-site/main/src/assets/images/portfolio_site.png)
+
+# Portfolio Site
 
 This project is a personal portfolio website built with React and TailwindCSS.
 It has a modern design and is used to showcase my experience and projects as well as a little about me.
