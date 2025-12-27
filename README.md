@@ -1,4 +1,6 @@
-# Vince's Portfolio Site
+<div align="center">
+  <h1>Portfolio Site</h1>
+</div>
 
 ![alt text](https://raw.githubusercontent.com/vincevd1/portfolio-site/main/src/assets/images/portfolio_site.png)
 
