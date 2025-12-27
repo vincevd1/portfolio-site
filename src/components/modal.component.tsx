@@ -1,23 +1,19 @@
 import { createPortal } from 'react-dom';
-import Button from './button.component';
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 
 export default function Modal({
     title,
     buttonContent,
-    isButton = true,
     className,
     children,
 }: {
     title?: string;
     buttonContent: React.ReactNode;
-    isButton?: boolean;
     className?: string;
     children?: React.ReactNode;
 }) {
     const [isOpen, setIsOpen] = useState(false);
-    const ModalButtonComponent = isButton ? Button : 'span';
 
     useEffect(() => {
         if (isOpen) document.body.classList.add('overflow-y-hidden');
@@ -26,12 +22,9 @@ export default function Modal({
 
     return (
         <>
-            <ModalButtonComponent
-                className={`${className} ${!isButton && 'hover:cursor-pointer hover:text-sky-500'}`}
-                onClick={() => setIsOpen(true)}
-            >
+            <div className={`${className}`} onClick={() => setIsOpen(true)}>
                 {buttonContent}
-            </ModalButtonComponent>
+            </div>
             {isOpen &&
                 createPortal(
                     <div className="w-screen h-screen fixed top-0 left-0 z-20 flex items-center justify-center bg-gray-950/40">

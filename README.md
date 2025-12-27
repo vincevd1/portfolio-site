@@ -14,6 +14,7 @@ You're free to copy this site and use it for yourself.
 To run the project locally in development mode, make sure you have Node.js installed.
 
 First clone the repository, then `cd` into `portfolio-site` and run `npm install`
+
 After that you can run the site locally using `npm run dev`
 
 The application will be available at `http://localhost:5173` by default.
