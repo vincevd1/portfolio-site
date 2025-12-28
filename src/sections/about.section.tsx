@@ -6,9 +6,10 @@ export default function AboutSection({ className }: { className?: string }) {
     return (
         <section id="about" className={`${className} text-justify`}>
             <SectionHeading title="ABOUT" />
-            <div className="relative float-right w-[35%] sm:w-[25%] mt-2 mr-2 ml-8 mb-2 rounded-md overflow-hidden outline-1 outline-offset-2 outline-sky-500">
-                <img src={ProfilePhoto} alt="PFP" className="w-full" />
-                <div className="absolute inset-0 bg-sky-500/35"></div>
+            <div className="relative float-right w-[35%] sm:w-[25%] mt-4 mr-4 ml-4 sm:ml-6 mb-2 overflow-visible [&>div]:rounded-sm [&>img]:rounded-sm">
+                <div className="absolute w-full h-full bottom-2 left-2 bg-sky-500/70"></div>
+                <img src={ProfilePhoto} alt="PFP" className="relative w-full z-10" />
+                <div className="absolute inset-0 z-10 bg-sky-500/10"></div>
             </div>
             <div>
                 I'm an experienced software developer with a strong interest in building scalable
