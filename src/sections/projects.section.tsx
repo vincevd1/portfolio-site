@@ -13,7 +13,7 @@ export default function ProjectSection({ className }: { className: string }) {
                 And unlike most of my passion projects, I actually finished it!"
                 image={PortfolioSiteImage}
                 skills={['React', 'Typescript', 'TailwindCSS']}
-                // href="https://connectedcare.nl/"
+                href="https://github.com/vincevd1/portfolio-site"
             />
         </section>
     );
