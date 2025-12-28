@@ -13,7 +13,13 @@ You're free to copy this site and use it for yourself.
 
 To run the project locally in development mode, make sure you have Node.js installed.
 
-First clone the repository, then `cd` into `portfolio-site` and run `npm install`
+First clone the repository, and install the dependencies.
+
+```
+git clone https://github.com/vincevd1/portfolio-site
+cd portfolio-site
+npm install
+```
 
 After that you can run the site locally using `npm run dev`
 
