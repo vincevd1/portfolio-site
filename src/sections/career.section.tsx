@@ -1,8 +1,10 @@
 import ExperienceItem from '../components/experienceItem.component';
+import SectionHeading from '../components/sectionHeading.component';
 
 export default function CareerSection({ className }: { className: string }) {
     return (
         <section id="career" className={`${className} group/list`}>
+            <SectionHeading title="CAREER" />
             <ExperienceItem
                 startString="SEP 2025"
                 title="Commissioner of Internal Affairs · S.V. Thalia"

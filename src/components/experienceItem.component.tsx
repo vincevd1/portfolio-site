@@ -22,9 +22,9 @@ export default function ExperienceItem({
             href={href}
             target="_blank"
             rel="norefferer noopener"
-            className="block relative group mb-10 group-hover/list:opacity-65 hover:opacity-100!"
+            className="block relative group mb-10 lg:group-hover/list:opacity-65 hover:opacity-100!"
         >
-            <div className="absolute rounded-md -inset-x-4 -inset-y-4 transition motion-reduce:transition-none group-hover:bg-slate-900/50 group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group-hover:drop-shadow-lg"></div>
+            <div className="absolute rounded-md -inset-x-4 -inset-y-4 transition motion-reduce:transition-none lg:group-hover:bg-slate-900/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
             <div className="relative z-10 gap-10 flex">
                 <div className="w-[30%] shrink-0">
                     {startString && (
@@ -36,14 +36,16 @@ export default function ExperienceItem({
                     {image && <img src={image} alt={title} className="w-full" />}
                 </div>
                 <div>
-                    <div className="font-bold mb-1 flex items-center gap-2 group-hover:text-sky-500">
+                    <div className="font-bold mb-1 group-hover:text-sky-500">
                         {title}
                         {href && (
-                            <ArrowUpRight
-                                size={15}
-                                className="-translate-x-1 translate-y-1 transition-transform duration-300
+                            <div className="inline-block w-2 ml-2">
+                                <ArrowUpRight
+                                    size={15}
+                                    className="-translate-x-1 translate-y-1 transition-transform duration-300
                    group-hover:translate-x-1 group-hover:-translate-y-1"
-                            />
+                                />
+                            </div>
                         )}
                     </div>
                     <div className="text-sm mb-4">{description}</div>

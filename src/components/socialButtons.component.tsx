@@ -3,9 +3,9 @@ import SocialIcon from '../components/socialIcon.component';
 import LinkedInIcon from '../assets/icons/linkedin';
 import InstagramIcon from '../assets/icons/instagram';
 
-export default function SocialButtons() {
+export default function SocialButtons({ className }: { className?: string }) {
     return (
-        <>
+        <div className={`${className} flex gap-5`}>
             <SocialIcon href="https://github.com/vincevd1" className="rounded-full">
                 <GitHubIcon />
             </SocialIcon>
@@ -18,6 +18,6 @@ export default function SocialButtons() {
             <SocialIcon href="https://www.instagram.com/vincevd1/" className="rounded-lg">
                 <InstagramIcon />
             </SocialIcon>
-        </>
+        </div>
     );
 }

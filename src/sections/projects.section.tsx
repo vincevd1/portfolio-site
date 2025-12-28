@@ -1,9 +1,11 @@
 import ExperienceItem from '../components/experienceItem.component';
 import PortfolioSiteImage from '../assets/images/portfolio_site.png';
+import SectionHeading from '../components/sectionHeading.component';
 
 export default function ProjectSection({ className }: { className: string }) {
     return (
         <section id="projects" className={`${className} group/list`}>
+            <SectionHeading title="PROJECTS" />
             <ExperienceItem
                 title="Portfolio Website"
                 description="This site was made with React, Tailwind and Lucide icons.

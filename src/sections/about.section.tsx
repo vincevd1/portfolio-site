@@ -1,10 +1,12 @@
 import Link from '../components/link.component';
 import ProfilePhoto from '../assets/images/pfp.jpg';
+import SectionHeading from '../components/sectionHeading.component';
 
 export default function AboutSection({ className }: { className?: string }) {
     return (
         <section id="about" className={`${className} text-justify`}>
-            <div className="relative float-right w-[25%] mt-2 mr-2 ml-8 mb-2 rounded-md overflow-hidden outline-1 outline-offset-2 outline-sky-500">
+            <SectionHeading title="ABOUT" />
+            <div className="relative float-right w-[35%] sm:w-[25%] mt-2 mr-2 ml-8 mb-2 rounded-md overflow-hidden outline-1 outline-offset-2 outline-sky-500">
                 <img src={ProfilePhoto} alt="PFP" className="w-full" />
                 <div className="absolute inset-0 bg-sky-500/35"></div>
             </div>

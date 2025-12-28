@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function Cursor() {
+export default function Glow() {
     const lerp = (x: number, y: number, a: number) => {
         return x + (y - x) * a;
     };
@@ -18,14 +18,24 @@ export default function Cursor() {
         window.addEventListener('mousemove', handleMouseMove);
 
         const animate = () => {
+            if (window.innerWidth < 1024) {
+                if (glowRef.current) {
+                    glowRef.current.style.transform = `translate(
+                        -150px,
+                        -150px
+                    )`;
+                }
+                requestAnimationFrame(animate);
+                return;
+            }
+
             position.current.x = lerp(position.current.x, mouse.current.x, 0.1);
             position.current.y = lerp(position.current.y, mouse.current.y, 0.1);
 
             if (glowRef.current) {
-                glowRef.current.style.transform = `translate3d(
+                glowRef.current.style.transform = `translate(
                     ${position.current.x - 300}px,
-                    ${position.current.y - 300}px,
-                    0
+                    ${position.current.y - 300}px
                 )`;
             }
 
